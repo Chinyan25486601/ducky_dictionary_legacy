@@ -1,0 +1,42 @@
+* {
+    --c0: #FFFFFF;
+    --c1: #F8F8F8;
+    --c1a: #f0f0f0;
+    --c2: #D2D2D2;
+    --c3: #686868;
+    --c4: #2a408e;
+    --c5: #161616;
+    --c6: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    height: inherit;
+    width: 30%;
+    background-color: var(--c1);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .menuitem {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    text-align: left;
+    border-bottom: 1px solid var(--c2);
+}
+
+.menu .menuitem:hover {
+    background-color: var(--c1a);
+}
