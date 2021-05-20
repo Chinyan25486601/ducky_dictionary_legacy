@@ -11,6 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, "微软雅黑";
+    font-size: 20px;
 }
 
 #app {
@@ -67,10 +68,10 @@
     font-size: 1.4em;
     font-family: Helvetica;
     overflow: hidden;
-    word-break: keep-all;
     vertical-align: text-bottom;
     /* background-color: #161616;
     color:#FFFFFF; */
+    /* TODO:取消自动换行 */
 }
 
 .menu .search_bar .input_area:focus {
@@ -100,3 +101,104 @@
     width: 100%;
 }
 */
+.menu #introduction {
+    text-align: center;
+    padding-left: 0;
+    cursor: default;
+}
+
+.menu #introduction * {
+    font-size: 2.4em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.menu #introduction .dictionary {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.menu #introduction .ducky {
+    color: #f9b208;
+}
+
+/* TODO:把这些复制的样式重新整一遍 */
+.content {
+    width: 75%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.content span {
+    font-size: 16px;
+    color: #777777;
+}
+.content .strong {
+    font-weight: bold;
+}
+.content .hidden {
+    visibility: hidden;
+}
+.content .hidden_ {
+    display: none;
+}
+.content a {
+    color: #001ba0;
+    text-decoration: underline;
+}
+.content #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 55vw;
+    max-width: 55vw;
+    font-family: Helvetica;
+    border: 1px solid #ececec;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.content .word_title {
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 50px;
+    padding-bottom: 5px;
+}
+.content .block {
+    margin-bottom: 14px;
+}
+.content .sound span::after {
+    content: " ";
+}
+.content .sound .IPA::before {
+    content: "[";
+}
+.content .sound span.IPA::after {
+    content: "]";
+}
+.content .derivative_type::after {
+    content: ": ";
+}
+.content .subtitle {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 24px;
+}
+.content .meaning {
+    margin-bottom: 10px;
+}
+.content .meaning_type {
+    font-family: Arial;
+    font-weight: bold;
+    padding: 4px 6px;
+    margin-right: 6px;
+}
+.content .meaning .noun {
+    color: #FFFFFF;
+    background: #AAAAAA;
+}
+.content .meaning_description {
+    color: #000000;
+    font-family: "微软雅黑", "宋体";
+}
