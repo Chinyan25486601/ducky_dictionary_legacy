@@ -1,0 +1,1 @@
+英汉词库可参考https://github.com/skywind3000/ecdict
