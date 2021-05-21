@@ -60,6 +60,7 @@
     height: 1.6em;
     padding-left: .5em;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .menu .search_bar .input_area {
@@ -131,7 +132,7 @@
 }
 
 .content#word_page {
-    /* display: none; */
+    display: none;
 }
 
 .content#word_page span {
@@ -210,4 +211,56 @@
 
 .content#search_page {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    padding-left: 0;
+    padding-top: 5%;
+}
+
+#search_page .search_bar {
+    background-color: var(--c0);
+    border-radius: 1em;
+    border: var(--c3) solid 2px;
+    width: 80%;
+    height: 3em;
+    display: inline-flex;
+    flex-direction: row;
+    cursor: auto;
+}
+
+#search_page .search_bar svg {
+    width: 2.4em;
+    height: 2.4em;
+    padding-left: .8em;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+#search_page .search_bar .input_area {
+    width: 100%;
+    height: 100%;
+    cursor: text;
+    font-size: 2.2em;
+    font-family: Helvetica;
+    overflow: hidden;
+    vertical-align: text-bottom;
+    /* background-color: #161616;
+    color:#FFFFFF; */
+    /* TODO:取消自动换行 */
+}
+
+#search_page .search_bar .input_area:focus {
+    outline: none;
+}
+
+#search_page hr {
+    margin-top: 2em;
+    width: 70%;
+    align-self: center;
+}
+
+#search_page .search_results {
+    
 }
