@@ -15,16 +15,17 @@
 }
 
 #app {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .menu {
     height: inherit;
-    width: 25%;
+    width: 30%;
     background-color: var(--c1);
     display: flex;
     flex-direction: column;
@@ -129,24 +130,28 @@
     padding-top: 5%;
 }
 
-.content span {
+.content#word_page {
+    /* display: none; */
+}
+
+.content#word_page span {
     font-size: 16px;
     color: #777777;
 }
-.content .strong {
+.content#word_page .strong {
     font-weight: bold;
 }
-.content .hidden {
+.content#word_page .hidden {
     visibility: hidden;
 }
-.content .hidden_ {
+.content#word_page .hidden_ {
     display: none;
 }
-.content a {
+.content#word_page a {
     color: #001ba0;
     text-decoration: underline;
 }
-.content #app {
+.content#word_page #app {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -157,48 +162,52 @@
     padding-left: 50px;
     padding-right: 50px;
 }
-.content .word_title {
+.content#word_page .word_title {
     font-family: "Times New Roman";
     font-weight: bold;
     font-size: 48px;
     margin-top: 50px;
     padding-bottom: 5px;
 }
-.content .block {
+.content#word_page .block {
     margin-bottom: 14px;
 }
-.content .sound span::after {
+.content#word_page .sound span::after {
     content: " ";
 }
-.content .sound .IPA::before {
+.content#word_page .sound .IPA::before {
     content: "[";
 }
-.content .sound span.IPA::after {
+.content#word_page .sound span.IPA::after {
     content: "]";
 }
-.content .derivative_type::after {
+.content#word_page .derivative_type::after {
     content: ": ";
 }
-.content .subtitle {
+.content#word_page .subtitle {
     margin-top: 14px;
     margin-bottom: 14px;
     font-weight: bold;
     font-size: 24px;
 }
-.content .meaning {
+.content#word_page .meaning {
     margin-bottom: 10px;
 }
-.content .meaning_type {
+.content#word_page .meaning_type {
     font-family: Arial;
     font-weight: bold;
     padding: 4px 6px;
     margin-right: 6px;
 }
-.content .meaning .noun {
+.content#word_page .meaning .noun {
     color: #FFFFFF;
     background: #AAAAAA;
 }
-.content .meaning_description {
+.content#word_page .meaning_description {
     color: #000000;
     font-family: "微软雅黑", "宋体";
+}
+
+.content#search_page {
+    display: none;
 }
