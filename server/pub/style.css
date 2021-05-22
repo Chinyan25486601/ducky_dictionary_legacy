@@ -255,12 +255,51 @@
     outline: none;
 }
 
-#search_page hr {
-    margin-top: 2em;
-    width: 70%;
-    align-self: center;
+#search_page .hr {
+    margin-top: 1.6em;
+    width: 75%;
+    border-bottom: 1px solid var(--c5);
 }
 
 #search_page .search_results {
-    
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+#search_page .search_result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--c5);
+}
+
+#search_page .search_result .search_result_word {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+#search_page .search_result .search_result_word .search_result_word_name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#search_page .search_result .search_result_word .meaning_type {
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 2em;
+    padding: .1em;
+}
+#search_page .search_result .search_result_word .noun {
+    color: var(--c0);
+    background-color: var(--c4);
+}
+
+#search_page .search_result .search_result_word_description {
+    color: var(--c3);
 }
