@@ -7,6 +7,9 @@
     --c4: #2a408e;
     --c5: #161616;
     --c6: #000000;
+    --noun: rgb(63,81,181);
+    --plural: rgb(0,150,136);
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -295,9 +298,15 @@
     margin-left: 2em;
     padding: .1em;
 }
+
 #search_page .search_result .search_result_word .noun {
     color: var(--c0);
-    background-color: var(--c4);
+    background-color: var(--noun);
+}
+
+#search_page .search_result .search_result_word .plural {
+    color: var(--c0);
+    background-color: var(--plural);
 }
 
 #search_page .search_result .search_result_word_description {
