@@ -4,11 +4,16 @@
     --c1a: #f0f0f0;
     --c2: #D2D2D2;
     --c3: #686868;
+    --c3a: #505050;
     --c4: #2a408e;
     --c5: #161616;
     --c6: #000000;
-    --noun: rgb(63,81,181);
-    --plural: rgb(0,150,136);
+    --adjective: #e91e63;
+    --noun: #3f51b5;
+    --plural: #536dfe;
+    --verb: #9c27b0;
+    --past: #aa00ff;
+    --past-participle: #d500f9;
     
     margin: 0;
     padding: 0;
@@ -132,6 +137,7 @@
     height: 100%;
     padding-left: 5%;
     padding-top: 5%;
+    overflow-y: auto;
 }
 
 .content#word_page {
@@ -245,7 +251,7 @@
     width: 100%;
     height: 100%;
     cursor: text;
-    font-size: 2.2em;
+    font-size: 2em;
     font-family: Helvetica;
     overflow: hidden;
     vertical-align: text-bottom;
@@ -283,32 +289,57 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
 }
 
 #search_page .search_result .search_result_word .search_result_word_name {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4em;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#search_page .search_result .search_result_word .search_result_word_name:hover {
+    color: var(--c4);
 }
 
 #search_page .search_result .search_result_word .meaning_type {
     font-family: Arial;
     font-weight: bold;
     margin-left: 2em;
-    padding: .1em;
+    padding: .2em;
+    color: var(--c0);
 }
 
 #search_page .search_result .search_result_word .noun {
-    color: var(--c0);
     background-color: var(--noun);
 }
 
 #search_page .search_result .search_result_word .plural {
-    color: var(--c0);
     background-color: var(--plural);
+}
+
+#search_page .search_result .search_result_word .verb {
+    background-color: var(--verb);
+}
+
+#search_page .search_result .search_result_word .past {
+    background-color: var(--past);
+}
+
+#search_page .search_result .search_result_word .past_participle {
+    background-color: var(--past-participle);
+}
+
+#search_page .search_result .search_result_word .adjective {
+    background-color: var(--adjective);
 }
 
 #search_page .search_result .search_result_word_description {
     color: var(--c3);
+    cursor: pointer;
+}
+
+#search_page .search_result .search_result_word_description:hover {
+    color: var(--c3a);
 }
