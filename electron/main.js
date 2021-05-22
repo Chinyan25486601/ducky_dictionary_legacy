@@ -14,7 +14,8 @@ function createWindow () {
     });
     win.setTitle("Ducky Dictionary");
     
-    win.setMenu(null);
+    // to TEST comment the statement below
+    // win.setMenu(null);
     win.loadURL("http://127.0.0.1:14514/");
 };
 
