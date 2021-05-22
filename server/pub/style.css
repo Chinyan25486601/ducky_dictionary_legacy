@@ -9,12 +9,16 @@
     --c5: #161616;
     --c6: #000000;
     --adjective: #e91e63;
+    --adverb: #f44336;
     --noun: #3f51b5;
     --plural: #536dfe;
     --verb: #9c27b0;
+    --verb-transitive: #ab47bc;
     --past: #aa00ff;
     --past-participle: #d500f9;
-    
+    --third-person-singular-present: #ce93d8;
+    --present-participle: #6a1b9a;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -138,6 +142,7 @@
     padding-left: 5%;
     padding-top: 5%;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .content#word_page {
@@ -283,6 +288,7 @@
     padding-top: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid var(--c5);
+    flex-wrap: wrap;
 }
 
 #search_page .search_result .search_result_word {
@@ -307,7 +313,7 @@
     font-family: Arial;
     font-weight: bold;
     margin-left: 2em;
-    padding: .2em;
+    padding: .2em .4em;
     color: var(--c0);
 }
 
@@ -331,8 +337,24 @@
     background-color: var(--past-participle);
 }
 
+#search_page .search_result .search_result_word .verb_transitive {
+    background-color: var(--verb-transitive);
+}
+
+#search_page .search_result .search_result_word .third_person_singular_present {
+    background-color: var(--third-person-singular-present);
+}
+
+#search_page .search_result .search_result_word .present_participle {
+    background-color: var(--present-participle);
+}
+
 #search_page .search_result .search_result_word .adjective {
     background-color: var(--adjective);
+}
+
+#search_page .search_result .search_result_word .adverb {
+    background-color: var(--adverb);
 }
 
 #search_page .search_result .search_result_word_description {
