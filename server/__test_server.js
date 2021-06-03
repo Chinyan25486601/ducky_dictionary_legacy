@@ -22,4 +22,4 @@ class Server {
 
 if (require.main === module){
     let server = new Server();
-}
+};
