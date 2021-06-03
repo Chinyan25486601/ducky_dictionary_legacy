@@ -1,0 +1,14 @@
+{
+  "name": "ducky_dictionary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitee.com:SheepOfJMJ/ducky_dictionary.git",
+  "author": "秦燕 <2640855495@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "less": "^4.1.1"
+  },
+  "scripts": {
+    "css": "lessc ./front_end/dev_pub/style.less ./front_end/pub/style.css"
+  }
+}
