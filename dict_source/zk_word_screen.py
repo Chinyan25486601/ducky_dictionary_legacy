@@ -2,7 +2,7 @@ import csv
 import json
 import re
 
-dest = []
+dest = list()
 i=0
 
 with open("./ecdict/ecdict.csv", encoding="utf-8") as csvfile:
