@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Pingfang SC";
+    src: local("pub/Pingfang.ttf");
+}
+
 * {
     --c0: #FFFFFF;
     --c1: #F8F8F8;
@@ -22,7 +27,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, "微软雅黑";
+    font-family: Helvetica,"Pingfang SC", "微软雅黑";
     font-size: 20px;
 }
 
