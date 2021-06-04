@@ -1,0 +1,558 @@
+[
+    {
+        "id": 0,
+        "word": "a",
+        "phonetic": "ei",
+        "definition": [
+            [
+                "n.",
+                "the 1st letter of the Roman alphabet"
+            ],
+            [
+                "n.",
+                "the blood group whose red cells carry the A antigen"
+            ]
+        ],
+        "translation": [
+            [
+                "",
+                "第一个字母 A; 一个; 第一的"
+            ],
+            [
+                "art.",
+                "[计] 累加器, 加法器, 地址, 振幅, 模拟, 区域, 面积, 汇编, 组件, 异步"
+            ]
+        ],
+        "pos": "",
+        "collins": "5",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk"
+        ],
+        "bnc": "5",
+        "frq": "5",
+        "exchange": [
+            [
+                ""
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 1,
+        "word": "ability",
+        "phonetic": "ә'biliti",
+        "definition": [
+            [
+                "n.",
+                "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment"
+            ],
+            [
+                "n.",
+                "possession of the qualities (especially mental qualities) required to do something or get something done"
+            ]
+        ],
+        "translation": [
+            [
+                "n.",
+                "能力, 才干"
+            ],
+            [
+                "",
+                "[经] 能力, 才能"
+            ]
+        ],
+        "pos": "",
+        "collins": "4",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "ky",
+            "toefl",
+            "ielts"
+        ],
+        "bnc": "946",
+        "frq": "783",
+        "exchange": [
+            [
+                "s",
+                "abilities"
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 2,
+        "word": "able",
+        "phonetic": "'eibl",
+        "definition": [
+            [
+                "a.",
+                "(usually followed by `to') having the necessary means or skill or know-how or authority to do something"
+            ],
+            [
+                "s.",
+                "have the skills and qualifications to do things well"
+            ],
+            [
+                "s.",
+                "having inherent physical or mental ability or capacity"
+            ],
+            [
+                "s.",
+                "having a strong healthy body"
+            ]
+        ],
+        "translation": [
+            [
+                "a.",
+                "能干的, 能够的"
+            ]
+        ],
+        "pos": "",
+        "collins": "5",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk"
+        ],
+        "bnc": "295",
+        "frq": "385",
+        "exchange": [
+            [
+                ""
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 3,
+        "word": "about",
+        "phonetic": "ә'baut",
+        "definition": [
+            [
+                "s.",
+                "on the move"
+            ],
+            [
+                "r.",
+                "all around or on all sides"
+            ],
+            [
+                "r.",
+                "in the area or vicinity"
+            ],
+            [
+                "r.",
+                "used of movement to or among many different places or in no particular direction"
+            ]
+        ],
+        "translation": [
+            [
+                "prep.",
+                "在...周围, 大约, 有关, 关于"
+            ],
+            [
+                "adv.",
+                "大约, 四处, 在附近, 周围"
+            ]
+        ],
+        "pos": "",
+        "collins": "5",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk"
+        ],
+        "bnc": "63",
+        "frq": "46",
+        "exchange": [
+            [
+                ""
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 4,
+        "word": "above",
+        "phonetic": "ә'bʌv",
+        "definition": [
+            [
+                "n.",
+                "an earlier section of a written text"
+            ],
+            [
+                "s.",
+                "appearing earlier in the same text"
+            ],
+            [
+                "r.",
+                "at an earlier place"
+            ],
+            [
+                "r.",
+                "in or to a place that is higher"
+            ]
+        ],
+        "translation": [
+            [
+                "prep.",
+                "在上方, 超出"
+            ],
+            [
+                "adv.",
+                "在上面"
+            ],
+            [
+                "a.",
+                "上述的, 上面的"
+            ]
+        ],
+        "pos": "",
+        "collins": "4",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk"
+        ],
+        "bnc": "733",
+        "frq": "893",
+        "exchange": [
+            [
+                ""
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 5,
+        "word": "abroad",
+        "phonetic": "ә'brɒ:d",
+        "definition": [
+            [
+                "s.",
+                "in a foreign country"
+            ],
+            [
+                "r.",
+                "to or in a foreign country"
+            ]
+        ],
+        "translation": [
+            [
+                "adv.",
+                "往国外, 到室外, 到处"
+            ],
+            [
+                "a.",
+                "往国外的, 在室外的, 广泛四散的"
+            ]
+        ],
+        "pos": "",
+        "collins": "3",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "toefl"
+        ],
+        "bnc": "2243",
+        "frq": "3363",
+        "exchange": [
+            [
+                ""
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 6,
+        "word": "absent",
+        "phonetic": "'æbsәnt",
+        "definition": [
+            [
+                "v.",
+                "go away or leave"
+            ],
+            [
+                "a.",
+                "not being in a specified place"
+            ],
+            [
+                "s.",
+                "lost in thought; showing preoccupation"
+            ]
+        ],
+        "translation": [
+            [
+                "a.",
+                "缺席的, 不在的, 缺乏的, 漫不经心的"
+            ],
+            [
+                "vt.",
+                "使缺席"
+            ]
+        ],
+        "pos": "",
+        "collins": "2",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "cet6",
+            "ky",
+            "toefl"
+        ],
+        "bnc": "4300",
+        "frq": "5516",
+        "exchange": [
+            [
+                "p",
+                "absented"
+            ],
+            [
+                "i",
+                "absenting"
+            ],
+            [
+                "d",
+                "absented"
+            ],
+            [
+                "3",
+                "absents"
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 7,
+        "word": "accent",
+        "phonetic": "'æksәnt",
+        "definition": [
+            [
+                "n.",
+                "distinctive manner of oral expression"
+            ],
+            [
+                "n.",
+                "a diacritical mark used to indicate stress or placed above a vowel to indicate a special pronunciation"
+            ]
+        ],
+        "translation": [
+            [
+                "n.",
+                "重音, 口音, 特点, 注重点"
+            ],
+            [
+                "vt.",
+                "重读, 加重音号于, 强调"
+            ]
+        ],
+        "pos": "",
+        "collins": "2",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "ky"
+        ],
+        "bnc": "3701",
+        "frq": "4140",
+        "exchange": [
+            [
+                "s",
+                "accents"
+            ],
+            [
+                "p",
+                "accented"
+            ],
+            [
+                "i",
+                "accenting"
+            ],
+            [
+                "d",
+                "accented"
+            ],
+            [
+                "3",
+                "accents"
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 8,
+        "word": "accept",
+        "phonetic": "әk'sept",
+        "definition": [
+            [
+                "v.",
+                "consider or hold as true"
+            ],
+            [
+                "v.",
+                "receive willingly something given or offered"
+            ],
+            [
+                "v.",
+                "give an affirmative reply to; respond favorably to"
+            ],
+            [
+                "v.",
+                "react favorably to; consider right and proper"
+            ]
+        ],
+        "translation": [
+            [
+                "vt.",
+                "接受, 承认, 同意, 相信, 赞成, 承担, 承兑, 采纳, 接纳, 容忍"
+            ],
+            [
+                "vi.",
+                "同意"
+            ]
+        ],
+        "pos": "",
+        "collins": "5",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "ky"
+        ],
+        "bnc": "488",
+        "frq": "766",
+        "exchange": [
+            [
+                "d",
+                "accepted"
+            ],
+            [
+                "p",
+                "accepted"
+            ],
+            [
+                "i",
+                "accepting"
+            ],
+            [
+                "3",
+                "accepts"
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 9,
+        "word": "accident",
+        "phonetic": "'æksidәnt",
+        "definition": [
+            [
+                "n.",
+                "an unfortunate mishap; especially one causing damage or injury"
+            ],
+            [
+                "n.",
+                "anything that happens suddenly or by chance without an apparent cause"
+            ]
+        ],
+        "translation": [
+            [
+                "n.",
+                "意外事件, 机遇, 事故, 次要方面"
+            ],
+            [
+                "",
+                "[化] 意外事故; 事故"
+            ]
+        ],
+        "pos": "",
+        "collins": "3",
+        "oxford": "1",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "ky",
+            "toefl"
+        ],
+        "bnc": "1187",
+        "frq": "1707",
+        "exchange": [
+            [
+                "s",
+                "accidents"
+            ]
+        ],
+        "detail": ""
+    },
+    {
+        "id": 10,
+        "word": "ache",
+        "phonetic": "eik",
+        "definition": [
+            [
+                "n.",
+                "a dull persistent (usually moderately intense) pain"
+            ],
+            [
+                "v.",
+                "have a desire for something or someone who is not present"
+            ],
+            [
+                "v.",
+                "be the source of pain"
+            ]
+        ],
+        "translation": [
+            [
+                "n.",
+                "疼痛"
+            ],
+            [
+                "vi.",
+                "痛, 哀怜, 渴望"
+            ]
+        ],
+        "pos": "",
+        "collins": "2",
+        "oxford": "",
+        "tag": [
+            "zk",
+            "gk",
+            "cet4",
+            "ky"
+        ],
+        "bnc": "8267",
+        "frq": "7717",
+        "exchange": [
+            [
+                "p",
+                "ached"
+            ],
+            [
+                "i",
+                "aching"
+            ],
+            [
+                "d",
+                "ached"
+            ],
+            [
+                "3",
+                "aches"
+            ]
+        ],
+        "detail": ""
+    }
+]
