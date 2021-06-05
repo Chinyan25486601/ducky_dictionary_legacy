@@ -599,6 +599,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+marked@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.nlark.com/marked/download/marked-2.0.7.tgz#bc5b857a09071b48ce82a1f7304913a993d4b7d1"
+  integrity sha1-vFuFegkHG0jOgqH3MEkTqZPUt9E=
+
 matcher@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/matcher/download/matcher-3.0.0.tgz#bd9060f4c5b70aa8041ccc6f80368760994f30ca"
