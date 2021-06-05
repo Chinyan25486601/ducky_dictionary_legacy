@@ -24,7 +24,8 @@ let meaning_type_class_table = [
     ["a.","adjective"],
     ["adv.","adverb"],
     ["prep.","preposition"],
-    ["conj.","conjunction"]
+    ["conj.","conjunction"],
+    ["r.","adverb"]
 ]
 
 let findWord = function (query) {
@@ -73,7 +74,7 @@ let findWord = function (query) {
             let meanings = document.querySelector(".meanings");
             meanings.innerHTML="";
             let meaning_id = 1;
-            word_data.translation.forEach(t=>{
+            word_data.definition.forEach(t=>{
                 if(true){
                     let meaning = document.createElement("div");
                     let meaningType = document.createElement("span");
@@ -95,12 +96,12 @@ let findWord = function (query) {
                     }else{
                         meaningType.classList.add("hidden");
                     }
+                    meaningType.innerText = t[0];
                     if(t[0]==lastType) {
                         meaningType.classList.add("hidden")
                     } else {
                         meaning.style.marginTop="5px";
                         lastType=t[0];
-                        meaningType.innerText = t[0];
                         meaning_description.classList.add("strong");
                     };
                     
