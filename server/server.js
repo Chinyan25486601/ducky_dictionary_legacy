@@ -13,8 +13,14 @@ class dictServer {
         this.app.set("views", path.join(__dirname));
         this.app.set("view engine", "ejs");
         this.app.get("/",(req,res)=>{
-            res.render("wordPage",{})
+            res.render("wordPage",{wordId:"-1"})
         });
+        this.app.get("/word_page",(req,res)=>{
+            let q = req.query;
+            if(q.hasOwnProperty("id")){
+                res.render("wordPage",{wordId:q.id});
+            }
+        })
         this.app.get("/word_data",(req,res)=>{
             let q = req.query;
             console.log(q);

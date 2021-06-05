@@ -4,7 +4,7 @@ let search_icon = document.getElementById("search_icon");
 let search_big = document.getElementById("search_big");
 let search_icon_big = document.getElementById("search_icon_big");
 let search_content_temp = "";
-let word_data = {};//{"id": 747, "word": "language", "phonetic": "'læŋgwidʒ", "definition": [["n.", "a systematic means of communicating by the use of sounds or conventional symbols"], ["n.", "the mental faculty or power of vocal communication"]], "translation": [["n.", "语言, 文字, 措辞"], ["", "[计] 语言"]], "pos": "", "collins": "4", "oxford": "1", "tag": ["zk", "gk", "ielts"], "bnc": "436", "frq": "722", "exchange": [["s", "languages"]], "detail": ""};
+let word_data = {};
 let exchange_table = [
     ["p","Past Tense"],
     ["d","Past Participle"],
@@ -25,17 +25,31 @@ let meaning_type_class_table = [
     ["adv.","adverb"],
     ["prep.","preposition"],
     ["conj.","conjunction"],
-    ["r.","adverb"]
+    ["r.","adverb"],
+    ["s.","adjective"],
+    ["n","noun"],
+    ["v","verb"],
+    ["vi","verb"],
+    ["vt","verb_transitive"],
+    ["adj","adjective"],
+    ["a","adjective"],
+    ["adv","adverb"],
+    ["prep","preposition"],
+    ["conj","conjunction"],
+    ["r","adverb"],
+    ["s","adjective"],
 ]
 
-let findWord = function (query) {
+
+var findWord = function (query="-1") {
     // switchContent(contentStatus.search_page);
     search_big.innerText = search_content_temp;
     //TODO:添加搜索处理机制
     //TODO:删除下面的占位置用的设施
 
     // TODO:删除下面的测试用代码添加真正的搜索处理
-    fetch(now_url+"/word_data?id="+search_big.innerText)
+    if(query=="-1") query=search_big.innerText;
+    fetch(now_url+"/word_data?id="+query)
         .then(response=>{
             return response.json()
         })
@@ -74,7 +88,7 @@ let findWord = function (query) {
             let meanings = document.querySelector(".meanings");
             meanings.innerHTML="";
             let meaning_id = 1;
-            word_data.definition.forEach(t=>{
+            word_data.translation.forEach(t=>{
                 if(true){
                     let meaning = document.createElement("div");
                     let meaningType = document.createElement("span");
@@ -151,3 +165,10 @@ search_icon_big.addEventListener("click", event=>{
     console.log(search_content_temp);
     findWord(search_content_temp);
 });
+
+
+let wordId = (document.querySelector("#wordId").innerHTML);
+console.log(wordId);
+if(wordId!=-1){
+    findWord(wordId)
+}
