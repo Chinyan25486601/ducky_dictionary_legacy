@@ -4,7 +4,6 @@ const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
 const fs = require("fs");
-const { query } = require("express");
 
 class Server {
     constructor(port=14514){
@@ -29,13 +28,7 @@ class Server {
                 res.send({})
             }
             // 浏览器端：
-            // fetch('http://localhost:14514/word_data?id=5')
-            // .then(function(response) {
-            //     return response.json();
-            // })
-            // .then(function(myJson) {
-            //     console.log(myJson);
-            // });
+            // await (await fetch('http://localhost:14514/word_data?id=5')).json()
         });
         this.app.listen(port,()=>{
 

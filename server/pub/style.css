@@ -23,6 +23,8 @@
     --past-participle: #d500f9;
     --third-person-singular-present: #ce93d8;
     --present-participle: #6a1b9a;
+    --preposition: #E1701A;
+    --conjunction: #f6dcbf;
 
     margin: 0;
     padding: 0;
@@ -182,11 +184,19 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+.content#word_page .title {
+    margin-top: 50px;
+}
+.content#word_page .word_id {
+    color: var(--c3);
+}
+.content#word_page .word_id::before {
+    content: "#";
+}
 .content#word_page .word_title {
     font-family: "Times New Roman";
     font-weight: bold;
     font-size: 48px;
-    margin-top: 50px;
     padding-bottom: 5px;
 }
 .content#word_page .block {
@@ -195,14 +205,25 @@
 .content#word_page .sound span::after {
     content: " ";
 }
+.content#word_page .sound .IPA {
+    font-size: 20px;
+}
 .content#word_page .sound .IPA::before {
     content: "[";
 }
 .content#word_page .sound span.IPA::after {
     content: "]";
 }
+.content#word_page .derivative_type {
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--c3a);
+}
 .content#word_page .derivative_type::after {
     content: ": ";
+}
+.content#word_page .derivative_word {
+    cursor: pointer;
 }
 .content#word_page .subtitle {
     margin-top: 14px;
@@ -218,6 +239,7 @@
     font-weight: bold;
     padding: 4px 6px;
     margin-right: 6px;
+    color: var(--c0);
 }
 .content#word_page .meaning .noun {
     color: #FFFFFF;
@@ -225,7 +247,6 @@
 }
 .content#word_page .meaning_description {
     color: #000000;
-    font-family: "微软雅黑", "宋体";
 }
 
 .content#search_page {
@@ -314,7 +335,7 @@
     color: var(--c4);
 }
 
-#search_page .search_result .search_result_word .meaning_type {
+#search_page .meaning_type {
     font-family: Arial;
     font-weight: bold;
     margin-left: 2em;
@@ -322,44 +343,45 @@
     color: var(--c0);
 }
 
-#search_page .search_result .search_result_word .noun {
+.noun {
     background-color: var(--noun);
 }
 
-#search_page .search_result .search_result_word .plural {
+.plural {
     background-color: var(--plural);
 }
-
-#search_page .search_result .search_result_word .verb {
+.verb {
     background-color: var(--verb);
 }
-
-#search_page .search_result .search_result_word .past {
+.past {
     background-color: var(--past);
 }
-
-#search_page .search_result .search_result_word .past_participle {
+.past_participle {
     background-color: var(--past-participle);
 }
-
-#search_page .search_result .search_result_word .verb_transitive {
+.verb_transitive {
     background-color: var(--verb-transitive);
 }
-
-#search_page .search_result .search_result_word .third_person_singular_present {
+.third_person_singular_present {
     background-color: var(--third-person-singular-present);
 }
-
-#search_page .search_result .search_result_word .present_participle {
+.present_participle {
     background-color: var(--present-participle);
 }
-
-#search_page .search_result .search_result_word .adjective {
+.adjective {
     background-color: var(--adjective);
 }
 
-#search_page .search_result .search_result_word .adverb {
+.adverb {
     background-color: var(--adverb);
+}
+
+.preposition {
+    background-color: var(--preposition);
+}
+
+.conjunction {
+    background-color: var(--conjunction);
 }
 
 #search_page .search_result .search_result_word_description {
