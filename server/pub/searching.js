@@ -3,6 +3,8 @@ let search = document.getElementById("search");
 let search_icon = document.getElementById("search_icon");
 let search_big = document.getElementById("search_big");
 let search_icon_big = document.getElementById("search_icon_big");
+let last_word = document.getElementById("last_word");
+let next_word = document.getElementById("next_word");
 let search_content_temp = "";
 let exchange_table = [
     ["p","Past Tense"],
@@ -15,9 +17,12 @@ let exchange_table = [
     ["0","Lemma"]
 ];
 let meaning_type_class_table = [
+    ["num.","number"],
+    ["num","number"],
     ["n.","noun"],
     ["v.","verb"],
     ["vi.","verb"],
+    ["aux.","verb"],
     ["vt.","verb_transitive"],
     ["adj.","adjective"],
     ["a.","adjective"],
@@ -45,7 +50,13 @@ let nowWordId = 0;
 let installWordData = function(word_data){
     document.querySelector(".word_id").innerText=word_data.id.toString();
     document.querySelector(".word_title").innerText=word_data.word;
-    document.querySelector(".IPA").innerText=word_data.phonetic;
+    let IPA = document.querySelector(".IPA");
+    if(word_data.phonetic==""){
+        IPA.style.display="none"
+    } else {
+        IPA.style.display="inherit"
+        IPA.innerHTML=word_data.phonetic;
+    }
     let derivatives = document.querySelector(".derivatives");
     derivatives.innerHTML="";
     word_data.exchange.forEach(e=>{
@@ -114,11 +125,19 @@ let installWordData = function(word_data){
             meanings.appendChild(meaning);
             meaning_id+=1;
         }
-    })
+    });
+    nowWordId=word_data.id;
+    console.log(nowWordId);
     switchContent(contentStatus.word_page);
 }
-let getWordDataById = function(id){
-    
+let getandInstallWordDataById = function(id){
+    fetch(now_url+"/word_data?id="+id.toString())
+        .then(response=>{
+            return response.json()
+        })
+        .then(myJson=>{
+            installWordData(myJson);
+        });
 }
 let findWord = function (query="-1") {
     // switchContent(contentStatus.search_page);
@@ -128,24 +147,31 @@ let findWord = function (query="-1") {
 
     // TODO:删除下面的测试用代码添加真正的搜索处理
     if(query=="-1") query=search_big.innerText;
-    fetch(now_url+"/word_data?id="+query)
-        .then(response=>{
-            return response.json()
-        })
-        .then(myJson=>{
-            installWordData(myJson);
-        });
+    if(query.trim()=="") return;
+    getandInstallWordDataById(Number(query));
 };
+
+let wordForward = function(direction=true){
+    if(nowWordId==0 && direction==false) return;
+    // True=>+1 False=>-1
+    let delta = Number(direction)*2-1;
+    getandInstallWordDataById(delta+nowWordId);
+}
 
 search.addEventListener("keydown", event=>{
     search.innerText.replaceAll("\n","");
+    console.log(event.keyCode)
     if(event.keyCode=="13"){
         event.preventDefault();
         search_content_temp = search.innerText;
-        console.log(search_content_temp);
+        // console.log(search_content_temp);
         findWord(search_content_temp);
         search.innerHTML="";
-    };
+    }else if(event.keyCode=="39"){
+        wordForward();
+    }else if(event.keyCode=="37"){
+        wordForward(false)
+    }
 });
 
 search_icon.addEventListener("click", event=>{
@@ -171,6 +197,8 @@ search_icon_big.addEventListener("click", event=>{
     findWord(search_content_temp);
 });
 
+last_word.addEventListener("click",event=>(wordForward(false)));
+next_word.addEventListener("click",event=>(wordForward()));
 
 let wordId = (document.querySelector("#wordId").innerHTML);
 console.log(wordId);

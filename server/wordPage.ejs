@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="pub/style.css" type="text/css" />
-    <title></title>
+    <title>Ducky Dictionary</title>
 </head>
 <script id="wordId"><%= wordId %></script>
 <body>
@@ -21,6 +21,8 @@
             </div>
             <!-- <div class="menuitem" id="switch_content_word_page"></div> -->
             <div class="menuitem" id="switch_content_search_page">切换到开发用参考页</div>
+            <div class="menuitem" id="last_word">上一个单词</div>
+            <div class="menuitem" id="next_word">下一个单词</div>
         </div>
         <div class="content" id="word_page">
             <div class="title block">
@@ -31,8 +33,8 @@
                 <div class="sound">
                     <span class="IPA"></span>
                 </div>
-                <div class="derivatives block">
-                </div>
+            </div>
+            <div class="derivatives block">
             </div>
             <div class="subtitle">Meanings</div>
             <div class="meanings block">
@@ -128,12 +130,13 @@
                         <div class="preposition meaning_type">prep.</div>
                         <div class="conjunction meaning_type">conj.</div>
                         <div class="article meaning_type">art.</div>
+                        <div class="number meaning_type">num.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="pub/searching.js"></script>
     <script src="pub/switch_content.js"></script>
+    <script src="pub/searching.js"></script>
 </body>
 </html>

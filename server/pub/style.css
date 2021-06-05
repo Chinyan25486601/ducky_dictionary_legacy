@@ -26,6 +26,8 @@
     --preposition: #E1701A;
     --conjunction: #c39a6b;
     --article: #99154e;
+    --number: #03256c;
+    --pronoun: #766161;
 
     margin: 0;
     padding: 0;
@@ -387,6 +389,14 @@
 
 .article {
     background-color: var(--article);
+}
+
+.number {
+    background-color: var(--number);
+}
+
+.pronoun {
+    background-color: var(--pronoun);
 }
 
 #search_page .search_result .search_result_word_description {

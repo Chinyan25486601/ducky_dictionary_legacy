@@ -24,11 +24,8 @@ let switchContent = function (destination) {
 };
 switchContent(contentStatus.search_page);
 
-let switch_content_word_page = document.getElementById("switch_content_word_page");
-switch_content_word_page.addEventListener("click", event=>{
-    switchContent(contentStatus.word_page);
-});
-let switch_content_search_page = document.getElementById("switch_content_search_page");
-switch_content_search_page.addEventListener("click", event=>{
+document.getElementById("switch_content_search_page").addEventListener("click", event=>{
     switchContent(contentStatus.search_page);
 });
+
+console.log("switch_content.js loaded successfully.")
