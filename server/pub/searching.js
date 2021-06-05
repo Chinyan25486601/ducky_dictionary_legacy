@@ -17,6 +17,8 @@ let exchange_table = [
     ["0","Lemma"]
 ];
 let meaning_type_class_table = [
+    ["art.","article"],
+    ["art","article"],
     ["num.","number"],
     ["num","number"],
     ["n.","noun"],
@@ -41,9 +43,7 @@ let meaning_type_class_table = [
     ["prep","preposition"],
     ["conj","conjunction"],
     ["r","adverb"],
-    ["s","adjective"],
-    ["art.","article"],
-    ["art","article"]
+    ["s","adjective"]
 ]
 let nowWordId = 0;
 
