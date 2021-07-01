@@ -121,8 +121,8 @@
 }
 
 .menu .bottom svg * {
-    stroke: var(--c3);
-    fill: var(--c3);
+    stroke: #000000;
+    fill: #000000;
 }
 
 .menu #introduction {
@@ -412,12 +412,44 @@
     display: none;
 }
 
+.content#setting_page .setting_group {
+    width: 100%;
+}
+
 .content#setting_page .setting_group_title {
     font-weight: bold;
     font-size: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.content#setting_page .single_setting_title {
+.content#setting_page .single_setting {
+    margin-bottom: 10px;
+    padding-right: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.content#setting_page .single_setting .setting_single_selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    user-select: none;
+}
+
+.content#setting_page .single_setting .setting_single_selection .choice {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--c2);
+    border-radius: 20%;
+}
+
+.content#setting_page .single_setting .setting_single_selection .choice.selected {
+    border-color: var(--c4);
 }

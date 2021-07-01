@@ -31,26 +31,42 @@ class dictServer {
         this.app.get("/word_bank_data",(req,res)=>{
             res.send(this.word_bank_data);
         });
+        this.app.get("/change_word_bank",(req,res)=>{
+            let q = req.query;
+            if(q.hasOwnProperty("name")){
+                if(q.name=="zk_words"){
+                    this.load_wordbank("zk_words");
+                    res.send({status:0})
+                } else if(q.name=="gk_words"){
+                    this.load_wordbank("gk_words");
+                    res.send({status:0})
+                } else {
+                    res.send({status:1})
+                }
+            }
+        })
         this.app.listen(port,()=>{
 
         });
         console.log("Server listening at port "+port.toString())
     };
     load_wordbank(bankname){
+        this.word_bank=[];
+        this.word_bank_data = {name:null,word_count:0};
         if(bankname==="zk_words"){
             fs.readFile(__dirname+"\\..\\dict_source\\zk_words.json","utf-8",(err,data)=>{
                 this.word_bank = JSON.parse(data);
                 this.word_bank_data.word_count = this.word_bank.length;
                 console.log("Successfully loaded zk_words.json");
-                console.log("word_count: "+this.word_count);
+                console.log("word_count: "+this.word_bank_data.word_count);
             });
             this.word_bank_data.name = bankname;
         }else if(bankname==="gk_words"){
-                fs.readFile(__dirname+"\\..\\dict_source\\gk_words.json","utf-8",(err,data)=>{
+            fs.readFile(__dirname+"\\..\\dict_source\\gk_words.json","utf-8",(err,data)=>{
                 this.word_bank = JSON.parse(data);
                 this.word_bank_data.word_count = this.word_bank.length;
                 console.log("Successfully loaded gk_words.json");
-                console.log("word_count: "+this.word_count);
+                console.log("word_count: "+this.word_bank_data.word_count);
             });
             this.word_bank_data.name = bankname;
         }
