@@ -46,7 +46,7 @@
 }
 
 .menu {
-    height: inherit;
+    height: 100%;
     width: 30%;
     background-color: var(--c1);
     display: flex;
@@ -106,6 +106,20 @@
     background-color: var(--c1a);
     cursor: pointer;
 }
+
+.menu .bottom {
+    margin-top: auto;
+    border-top: 1px solid var(--c2);
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu .bottom svg * {
+    stroke: var(--c3);
+    fill: var(--c3);
+}
+
 /* 
 .menu .menuitem .search_bar .dropdown {
     display: none;

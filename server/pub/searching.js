@@ -46,6 +46,20 @@ let meaning_type_class_table = [
     ["s","adjective"]
 ]
 let nowWordId = 0;
+let word_bank_data = {};
+
+let getInitialWordBankData = function(){
+    fetch(now_url+"/word_bank_data")
+        .then(response=>{
+            return response.json()
+        })
+        .then(myJson=>{
+            word_bank_data = myJson;
+            console.log(word_bank_data)
+        })
+}
+
+getInitialWordBankData();
 
 let installWordData = function(word_data){
     document.querySelector(".word_id").innerText=word_data.id.toString();
