@@ -38,7 +38,6 @@ class dictServer {
                         name: "zk_words",
                         word_count: this.word_count
                     });
-                    console.log("hah")
                 }
             }
         });

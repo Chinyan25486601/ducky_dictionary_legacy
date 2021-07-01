@@ -5,6 +5,8 @@ let search_big = document.getElementById("search_big");
 let search_icon_big = document.getElementById("search_icon_big");
 let last_word = document.getElementById("last_word");
 let next_word = document.getElementById("next_word");
+let random_word = document.getElementById("random_word");
+let settings = document.getElementById("settings")
 let search_content_temp = "";
 let exchange_table = [
     ["p","Past Tense"],
@@ -46,7 +48,7 @@ let meaning_type_class_table = [
     ["s","adjective"]
 ]
 let nowWordId = 0;
-let word_bank_data = {};
+let word_bank_data = {name:null,word_count:0};
 
 let getInitialWordBankData = function(){
     fetch(now_url+"/word_bank_data")
@@ -144,6 +146,7 @@ let installWordData = function(word_data){
     console.log(nowWordId);
     switchContent(contentStatus.word_page);
 }
+
 let getandInstallWordDataById = function(id){
     fetch(now_url+"/word_data?id="+id.toString())
         .then(response=>{
@@ -153,6 +156,7 @@ let getandInstallWordDataById = function(id){
             installWordData(myJson);
         });
 }
+
 let findWord = function (query="-1") {
     // switchContent(contentStatus.search_page);
     search_big.innerText = search_content_temp;
@@ -210,6 +214,10 @@ search_icon_big.addEventListener("click", event=>{
     console.log(search_content_temp);
     findWord(search_content_temp);
 });
+
+random_word.addEventListener("click",event=>{
+    getandInstallWordDataById(Math.floor(Math.random() * word_bank_data.word_count))
+})
 
 last_word.addEventListener("click",event=>(wordForward(false)));
 next_word.addEventListener("click",event=>(wordForward()));

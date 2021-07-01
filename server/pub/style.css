@@ -115,30 +115,15 @@
     align-items: center;
 }
 
+.menu .bottom svg {
+    margin: 5px;
+}
+
 .menu .bottom svg * {
     stroke: var(--c3);
     fill: var(--c3);
 }
 
-/* 
-.menu .menuitem .search_bar .dropdown {
-    display: none;
-    position: absolute;
-}
-
-.menu .menuitem .search_bar:hover .dropdown, .menu .menuitem .search_bar:active .dropdown {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    transform: translateY(2em);
-    width: 80%;
-}
-
-.menu .menuitem .search_bar:hover .dropdown .dropdown_item {
-    background-color: #000000;
-    width: 100%;
-}
-*/
 .menu #introduction {
     text-align: center;
     padding-left: 0;
