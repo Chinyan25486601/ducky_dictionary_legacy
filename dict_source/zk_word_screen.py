@@ -13,7 +13,7 @@ with open("./ecdict/ecdict.csv", encoding="utf-8") as csvfile:
         # if i>10:
         #     break
         # ---------------------
-        if not "zk" in w[7]:
+        if not "gk" in w[7]:
             continue
         else:
             w_ = list(w)
@@ -56,7 +56,7 @@ with open("./ecdict/ecdict.csv", encoding="utf-8") as csvfile:
 
 print(i+1)
 print(dest[0]["definition"])
-with open("zk_words.json", "w",encoding="utf-8") as zkfile:
+with open("gk_words.json", "w",encoding="utf-8") as zkfile:
     # dev
     # zkfile.write(json.dumps(dest, indent=4,ensure_ascii=False))
     

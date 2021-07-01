@@ -60,6 +60,7 @@
     padding-left: 2em;
     text-align: left;
     border-bottom: 1px solid var(--c2);
+    user-select: none;
 }
 
 #search_menuitem {
@@ -405,4 +406,18 @@
 
 #search_page .search_result .search_result_word_description:hover {
     color: var(--c3a);
+}
+
+.content#setting_page {
+    display: none;
+}
+
+.content#setting_page .setting_group_title {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.content#setting_page .single_setting_title {
+
 }
