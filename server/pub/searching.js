@@ -157,6 +157,20 @@ let getandInstallWordDataById = function(id){
         });
 }
 
+let getandInstallWordDataByWord = function(word){
+    fetch(now_url+"/word_data?word="+word)
+        .then(response=>{
+            return response.json()
+        })
+        .then(myJson=>{
+            if(myJson.id==-1){
+                return;
+            }
+            console.log(myJson);
+            installWordData(myJson);
+        });
+}
+
 let findWord = function (query="-1") {
     // switchContent(contentStatus.search_page);
     search_big.innerText = search_content_temp;
@@ -166,7 +180,14 @@ let findWord = function (query="-1") {
     // TODO:删除下面的测试用代码添加真正的搜索处理
     if(query=="-1") query=search_big.innerText;
     if(query.trim()=="") return;
-    getandInstallWordDataById(Number(query));
+
+    let number_patt = /^[#,]\d{1,}$/;
+    let number_patt_result = number_patt.exec(query);
+    if(number_patt_result!=null){
+        getandInstallWordDataById(Number(number_patt_result[0].slice(1)))
+    } else {
+        getandInstallWordDataByWord(query)
+    }
 };
 
 let wordForward = function(direction=true){
@@ -178,7 +199,6 @@ let wordForward = function(direction=true){
 
 search.addEventListener("keydown", event=>{
     search.innerText.replaceAll("\n","");
-    console.log(event.keyCode)
     if(event.keyCode=="13"){
         event.preventDefault();
         search_content_temp = search.innerText;
@@ -222,8 +242,8 @@ random_word.addEventListener("click",event=>{
 last_word.addEventListener("click",event=>(wordForward(false)));
 next_word.addEventListener("click",event=>(wordForward()));
 
-let wordId = (document.querySelector("#wordId").innerHTML);
-console.log(wordId);
-if(wordId!=-1){
-    findWord(wordId)
+let query = (document.querySelector("#wordId").innerHTML);
+console.log(query);
+if(query!=-1){
+    findWord(query)
 }

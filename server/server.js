@@ -26,6 +26,18 @@ class dictServer {
             let q = req.query;
             if(q.hasOwnProperty("id")){
                 res.send(this.word_bank[q.id])
+            };
+            if(q.hasOwnProperty("word")){
+                let status = false;
+                this.word_bank.forEach(data=>{
+                    if(data.word==q.word){
+                        res.send(data);
+                        status = true;
+                    }
+                });
+                if(status==false){
+                    res.send({id: -1});
+                }
             }
         });
         this.app.get("/word_bank_data",(req,res)=>{
@@ -44,7 +56,7 @@ class dictServer {
                     res.send({status:1})
                 }
             }
-        })
+        });
         this.app.listen(port,()=>{
 
         });
