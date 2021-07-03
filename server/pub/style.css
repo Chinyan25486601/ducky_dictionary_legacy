@@ -169,6 +169,21 @@
 .content#word_page .hidden {
     visibility: hidden;
 }
+.content#word_page svg.star {
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.content#word_page svg.star#star_lighted {
+    /* fill: var(--c2); */
+    fill: #f9b208;
+}
+.content#word_page svg.star#star_unlighted {
+    display: none;
+    stroke: var(--c2);
+    stroke-width: 0.5px;
+}
 .content#word_page .hidden_ {
     display: none;
 }
@@ -176,7 +191,7 @@
     color: #001ba0;
     text-decoration: underline;
 }
-.content#word_page #app {
+/* .content#word_page #app {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -186,7 +201,7 @@
     border: 1px solid #ececec;
     padding-left: 50px;
     padding-right: 50px;
-}
+} */
 .content#word_page .title {
     margin-top: 50px;
 }

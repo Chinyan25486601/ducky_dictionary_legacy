@@ -174,27 +174,28 @@ let getandInstallWordDataByWord = function(word){
 let findWord = function (query="-1") {
     // switchContent(contentStatus.search_page);
     search_big.innerText = search_content_temp;
-    //TODO:添加搜索处理机制
-    //TODO:删除下面的占位置用的设施
 
-    // TODO:删除下面的测试用代码添加真正的搜索处理
     if(query=="-1") query=search_big.innerText;
     if(query.trim()=="") return;
 
     let number_patt = /^[#,]\d{1,}$/;
     let number_patt_result = number_patt.exec(query);
     if(number_patt_result!=null){
-        getandInstallWordDataById(Number(number_patt_result[0].slice(1)))
+        getandInstallWordDataById(Number(number_patt_result[0].slice(1)));
     } else {
-        getandInstallWordDataByWord(query)
+        getandInstallWordDataByWord(query);
     }
 };
 
 let wordForward = function(direction=true){
     if(nowWordId==0 && direction==false) return;
-    // True=>+1 False=>-1
+    // True=>+1 False=> -1
     let delta = Number(direction)*2-1;
     getandInstallWordDataById(delta+nowWordId);
+}
+
+let getRandomWord = function(event=null){
+    getandInstallWordDataById(Math.floor(Math.random() * word_bank_data.word_count));
 }
 
 search.addEventListener("keydown", event=>{
@@ -235,15 +236,16 @@ search_icon_big.addEventListener("click", event=>{
     findWord(search_content_temp);
 });
 
-random_word.addEventListener("click",event=>{
-    getandInstallWordDataById(Math.floor(Math.random() * word_bank_data.word_count))
-})
+random_word.addEventListener("click",getRandomWord)
 
 last_word.addEventListener("click",event=>(wordForward(false)));
 next_word.addEventListener("click",event=>(wordForward()));
 
-let query = (document.querySelector("#wordId").innerHTML);
-console.log(query);
-if(query!=-1){
-    findWord(query)
-}
+// let query = (document.querySelector("#wordId").innerHTML);
+// console.log(query);
+// if(query!=-1){
+//     findWord(query)
+// } else {
+//     getandInstallWordDataById(1);
+// }
+getandInstallWordDataById(1);

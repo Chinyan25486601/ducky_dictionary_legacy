@@ -8,20 +8,22 @@ class dictServer {
     constructor(port=14514){
         this.word_bank=[];
         this.word_bank_data = {name:null,word_count:0};
+        this.language = "en";
         this.load_wordbank("zk_words");
         this.app = express();
         this.app.use(express.static(__dirname+""))
         this.app.set("views", path.join(__dirname));
         this.app.set("view engine", "ejs");
         this.app.get("/",(req,res)=>{
-            res.render("wordPage",{wordId:"-1"})
+            // res.render("wordPage",{wordId:"-1"})
+            res.render("wordPage")
         });
-        this.app.get("/word_page",(req,res)=>{
-            let q = req.query;
-            if(q.hasOwnProperty("id")){
-                res.render("wordPage",{wordId:q.id});
-            }
-        })
+        // this.app.get("/word_page",(req,res)=>{
+        //     let q = req.query;
+        //     if(q.hasOwnProperty("id")){
+        //         res.render("wordPage",{wordId:q.id});
+        //     }
+        // })
         this.app.get("/word_data",(req,res)=>{
             let q = req.query;
             if(q.hasOwnProperty("id")){
@@ -29,14 +31,29 @@ class dictServer {
             };
             if(q.hasOwnProperty("word")){
                 let status = false;
+                let return_data = []
+                if(this.language=="en"){
+                    if(q.word=="are" || q.word=="were"){
+                        q.word="be";
+                    }
+                }
                 this.word_bank.forEach(data=>{
                     if(data.word==q.word){
                         res.send(data);
                         status = true;
-                    }
+                        return;
+                    } else {
+                        data.exchange.forEach(exchange=>{
+                            if(exchange[1]==q.word){
+                                res.send(data)
+                                status = true;
+                                return;
+                            }
+                        });
+                    };
                 });
                 if(status==false){
-                    res.send({id: -1});
+                    res.send({id: -1, words: return_data});
                 }
             }
         });

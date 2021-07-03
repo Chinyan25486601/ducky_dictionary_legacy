@@ -29,7 +29,7 @@ let switchContent = function (destination) {
         nowStatus = contentStatus.setting_page;
     };
 };
-switchContent(contentStatus.setting_page);
+switchContent(contentStatus.word_page);
 
 document.getElementById("switch_content_search_page").addEventListener("click", event=>{
     switchContent(contentStatus.search_page);
