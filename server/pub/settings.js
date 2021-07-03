@@ -33,5 +33,11 @@ let init_word_bank_source_select = function(){
             gk_words.classList.add("selected");
         })
     });
+    change_word_bank_source("zk_words").then(json=>{
+        word_bank_sources.forEach(e=>{
+            e.classList.remove("selected")
+        })
+        zk_words.classList.add("selected");
+    });
 };
 init_word_bank_source_select()

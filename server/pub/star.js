@@ -12,5 +12,26 @@ let setStarFunc = function(isLighted){
         }
     }
 }
-star_lighted.addEventListener("click",setStarFunc(false))
-star_unlighted.addEventListener("click",setStarFunc(true))
+setStarFunc(false)();
+let addFavourite = function(e=null){
+    fetch(now_url+"/add_favourite?id="+nowWordId.toString())
+        .then(response=>{
+            return response.json()
+        }).then(json=>{
+            if(json.status==0){
+                setStarFunc(true)();
+            }
+        })
+};
+let removeFavourite = function(e=null){
+    fetch(now_url+"/remove_favourite?id="+nowWordId.toString())
+        .then(response=>{
+            return response.json()
+        }).then(json=>{
+            if(json.status==0){
+                setStarFunc(false)();
+            }
+        })
+};
+star_lighted.addEventListener("click",removeFavourite)
+star_unlighted.addEventListener("click",addFavourite)

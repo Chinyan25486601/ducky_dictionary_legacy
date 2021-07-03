@@ -64,6 +64,7 @@ let getWordBankData = function(){
 getWordBankData();
 
 let installWordData = function(word_data){
+    setStarFunc(false)();
     document.querySelector(".word_id").innerText=word_data.id.toString();
     document.querySelector(".word_title").innerText=word_data.word;
     let IPA = document.querySelector(".IPA");
@@ -143,7 +144,12 @@ let installWordData = function(word_data){
         }
     });
     nowWordId=word_data.id;
-    console.log(nowWordId);
+    console.log(word_data);
+    if(word_data.favourite==true){
+        setStarFunc(true)()
+    } else {
+        setStarFunc(false)()
+    }
     switchContent(contentStatus.word_page);
 }
 
