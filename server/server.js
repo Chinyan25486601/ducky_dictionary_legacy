@@ -36,7 +36,7 @@ class dictServer {
             let q = req.query;
             if(q.hasOwnProperty("id")){
                 let ret = this.word_bank[q.id];
-                if(this.favourites.indexOf(ret.id)!=-1){
+                if(this.favourites.indexOf(Number(q.id))!=-1){
                     ret.favourite=true;
                 } else {
                     ret.favourite=false;
@@ -113,7 +113,12 @@ class dictServer {
             if(q.hasOwnProperty("id")){
                 let favourites_temp_index = this.favourites_temp.indexOf(Number(q.id));
                 let favourite_index = this.favourites.indexOf(Number(q.id));
-                this.favourites_temp.splice();
+                if(favourites_temp_index!=-1){
+                    this.favourites_temp.splice(favourites_temp_index,favourites_temp_index);
+                } else if(this.favourite_index!=-1) {
+                    this.favourites.splice(favourite_index,favourite_index)
+                }
+                this.flush_favourites();
                 console.log(this.favourites);
                 console.log(this.favourites_temp);
                 res.send({status:0});
